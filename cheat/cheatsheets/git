@@ -104,3 +104,16 @@ git clone --depth 1 <remote-url>
 
 # To unshallow a clone
 git pull --unshallow
+
+# git-svn
+git svn clone file:///tmp/test-svn -T trunk -b branches -t tags 
+
+git svn rebase
+
+git svn dcommit   
+
+# git guide
+git-scm.com/book/zh/v1
+https://www.atlassian.com/git/tutorials/
+http://marklodato.github.io/visual-git-guide/index-zh-cn.html
+

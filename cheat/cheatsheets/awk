@@ -1,3 +1,22 @@
+# awk 
+# FS       - Input Field Separator
+# OFS      - Output Field Separator
+# RS       - Record Separator
+# ORS      - Output Record Separator
+# NR       - Number of Records
+# FILENAME – Current File Name
+# FNR      - File "Number of Record"
+# NF       - The number of fields in the current input record.
+# 
+# /regular expression/
+# relational expression
+# pattern && pattern
+# pattern || pattern
+# pattern ? pattern : pattern
+# (pattern)
+# ! pattern
+# pattern1, pattern2      
+
 # sum integers from a file or stdin, one integer per line:
 printf '1\n2\n3\n' | awk '{ sum += $1} END {print sum}'
 
