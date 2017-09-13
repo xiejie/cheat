@@ -38,3 +38,7 @@ iptables -D INPUT 2
 
 # 2.b) OR INSERT a rule.
 iptables -I INPUT {LINE_NUMBER} -i eth1 -p tcp --dport 21 -s 123.123.123.123 -j ACCEPT -m comment --comment "This rule is here for this reason"
+
+# 拒绝访问防火墙的新数据包，但允许响应连接或与已有连接相关的数据包
+iptables -A INPUT -p tcp -m state --state NEW -j DROP
+iptables -A INPUT -p tcp -m state --state ESTABLISHED,RELATED -j ACCEPT
